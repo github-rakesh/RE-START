@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Postings Blog</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/unicons.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <i class="uil uil-sync"></i>
+        <div class="logo-text">
+          <h1><span class="logo-re">RE</span>-START</h1>
+          <p>Never Giveup</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="job-search">
+        <h1>Find your perfect job</h1>
+        <div>
+          <input type="text" id="searchInput" placeholder="Search for jobs..." />
+      </div>
+      </section>
+
+      <section class="ads-banner">
+        <div class="ad-text">
+          <h2>Don't Miss Out on the Best Opportunities. Unlock Your Dream Career!</h2>
+          <p>Browse thousands of job openings tailored for you.</p>
+        </div>
+        <div class="ad-image">
+          <img src="looking.png" alt="Ad Image">
+        </div>
+      </section>
+
+      <!-- Popular Job Section -->
+<section id="popular-job-section" class="popular-job-section">
+  <div class="header">
+    <h2>Popular Jobs</h2>
+  </div>
+  <div class="job-container">
+    <div class="job-grid">
+      <!-- Job Card 1 -->
+      <div class="job-card" onclick="window.open('https://ibegin.tcs.com/iBegin/', '_blank')">
+        <div class="job-info-fixed">
+          <img src="tcs.png" alt="Company Logo" class="company-logo">
+          <div class="job-info">
+            <h3>Tata Consultancy Services</h3>
+            <p class="job-title">Software Engineer</p>
+            <div class="location-salary">
+              <p class="location">Location:<br>Hyderabad</p>
+              <p class="salary">Salary:<br>3-10 LPA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 2 -->
+      <div class="job-card" onclick="window.open('https://careers.ltimindtree.com/', '_blank')">
+        <div class="job-info-fixed">
+          <img src="l&t.png" alt="Company Logo" class="company-logo">
+          <div class="job-info">
+            <h3>LTI MindsTree</h3>
+            <p class="job-title">Software Specialist</p>
+            <div class="location-salary">
+              <p class="location">Location:<br>India</p>
+              <p class="salary">Salary:<br>Min: 4 LPA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 3 -->
+      <div class="job-card" onclick="window.open('https://jobsindia.deloitte.com/?icid=top_', '_blank')">
+        <div class="job-info-fixed">
+          <img src="deloitte.png" alt="Company Logo" class="company-logo">
+          <div class="job-info">
+            <h3>Deloitte India</h3>
+            <p class="job-title">Software Tester</p>
+            <div class="location-salary">
+              <p class="location">Location:<br>India</p>
+              <p class="salary">Salary:<br>Min: 3 LPA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 4 -->
+      <div class="job-card" onclick="window.open('https://careers.wipro.com/careers-home', '_blank')">
+        <div class="job-info-fixed">
+          <img src="data:image/png;base64,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" alt="Company Logo" class="company-logo">
+          <div class="job-info">
+            <h3>Wipro</h3>
+            <p class="job-title">Test Engineer</p>
+            <div class="location-salary">
+              <p class="location">Location:<br>India</p>
+              <p class="salary">Salary:<br>3-8 LPA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 5 -->
+      <div class="job-card" onclick="window.open('https://career.infosys.com/joblist?companyhiringtype=IL&countrycode=IN', '_blank')">
+        <div class="job-info-fixed">
+          <img src="data:image/png;base64,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" alt="Company Logo" class="company-logo">
+          <div class="job-info">
+            <h3>Infosys</h3>
+            <p class="job-title">Test Analyst</p>
+            <div class="location-salary">
+              <p class="location">Location:<br>India</p>
+              <p class="salary">Salary:<br>Min: 2.5LPA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Job Card 6 -->
+      <div class="job-card" onclick="window.open('https://www.accenture.com/in-en/careers/jobsearch?jk=&sb=1&vw=0&is_rj=0&pg=1', '_blank')">
+        <div class="job-info-fixed">
+          <img src="data:image/png;base64,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" alt="Company Logo" class="company-logo">
+          <div class="job-info">
+            <h3>Accenture</h3>
+            <p class="job-title">Quality Engineer</p>
+            <div class="location-salary">
+              <p class="location">Location:<br>Hyderabad</p>
+              <p class="salary">Salary:<br>Min: 2 LPA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Job Card 7 -->
+      <div class="job-card" onclick="window.open('https://careers.cognizant.com/india-en/jobs/', '_blank')">
+        <div class="job-info-fixed">
+          <img src="https://careers.cognizant.com/images/logo.svg" alt="Company Logo" class="company-logo">
+          <div class="job-info">
+            <h3>Cognizant</h3>
+            <p class="job-title">QA Specialist</p>
+            <div class="location-salary">
+              <p class="location">Location:<br>Hyderabad</p>
+              <p class="salary">Salary:<br>Min: 3.5 LPA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Job Card 8 -->
+      <div class="job-card" onclick="window.open('https://www.amazon.jobs/en/location/hyderabad-india', '_blank')">
+        <div class="job-info-fixed">
+          <img src="data:image/png;base64,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" alt="Company Logo" class="company-logo">
+          <div class="job-info">
+            <h3>Amazon</h3>
+            <p class="job-title">Software Test Engineer</p>
+            <div class="location-salary">
+              <p class="location">Location:<br>Hyderabad</p>
+              <p class="salary">Salary:<br>Min: 4 LPA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Job Card 9 -->
+      <div class="job-card" onclick="window.open('https://www.capgemini.com/careers/join-capgemini/job-search/?size=45', '_blank')">
+        <div class="job-info-fixed">
+          <img src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/logo.svg" alt="Company Logo" class="company-logo">
+          <div class="job-info">
+            <h3>Capgemini</h3>
+            <p class="job-title">Quality Manual Engineer</p>
+            <div class="location-salary">
+              <p class="location">Location:<br>India</p>
+              <p class="salary">Salary:<br>Min: 3 LPA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Vacancy List Section -->
+<section id="vacancy-list-section" class="vacancy-list-section">
+  <div class="vacancy-header">
+      <h2 class="vacancy-title">Today's Vacancy List</h2>
+  </div>
+
+  <div class="vacancy-container" id="vacancycontainer">
+      <!-- Job Card 1 -->
+      <div class="vacancy-item"  data-tags="manual,automation">
+          <div class="company-info">
+              <img src="deloitte.png" alt="Company Logo" class="company-logo">
+              <div class="company-name">Wipro</div>
+          </div>
+          <div class="vacancy-details">
+              <div class="job-title-container">
+                  <span class="job-title">Quality engineer</span>
+                  <span class="job-type">3 years Experience</span>
+              </div>
+              <div class="job-tags">
+                  <span class="tag">manual</span>
+                  <span class="tag">automation</span>
+              </div>
+              <div class="job-meta">
+                  <span class="job-period"><i class="uil-bookmark-full"></i> Full-Time</span>
+                  <span class="job-qualification"><i class="uil-university"></i> Bachelor's Degree</span>
+                  <span class="job-notice"><i class="uil-clock"></i> 2 weeks notice</span>
+                  <span class="job-location"><i class="uil-map-marker-alt"></i> New York, NY</span>
+                  <span class="job-salary"><i class="uil-money-withdrawal"></i> 5-8 LPA</span>
+                  <span class="job-date"><i class="uil-calendar-alt"></i> 10/07/2024</span>
+              </div>
+          </div>
+          <div class="apply">
+            <button class="apply-button" data-link="" data-email="rakesh@gmail.com">Apply Now</button>
+          </div>
+      </div>
+
+      <!-- Job Card 2 -->
+      <div class="vacancy-item">
+          <div class="company-info">
+              <img src="deloitte.png" alt="Company Logo" class="company-logo">
+              <div class="company-name">Deloitte</div>
+          </div>
+          <div class="vacancy-details">
+              <div class="job-title-container">
+                  <span class="job-title">analyst</span>
+                  <span class="job-type">2-5 years Experience</span>
+              </div>
+              <div class="job-tags">
+                  <span class="tag">mobile</span>
+              </div>
+              <div class="job-meta">
+                  <span class="job-period"><i class="uil-bookmark-full"></i> Full-Time</span>
+                  <span class="job-qualification"><i class="uil-university"></i> Bachelor's Degree</span>
+                  <span class="job-notice"><i class="uil-clock"></i> 2 weeks notice</span>
+                  <span class="job-location"><i class="uil-map-marker-alt"></i> New York, NY</span>
+                  <span class="job-salary"><i class="uil-money-withdrawal"></i> 5-8 LPA</span>
+                  <span class="job-date"><i class="uil-calendar-alt"></i> 10/07/2024</span>
+              </div>
+          </div>
+          <div class="apply">
+            <button class="apply-button" data-link="" data-email="rakesh@gmail.com">Apply Now</button>
+          </div>
+      </div>
+
+      <!-- Job Card 3 -->
+      <div class="vacancy-item" data-tags="manual">
+          <div class="company-info">
+              <img src="deloitte.png" alt="Company Logo" class="company-logo">
+              <div class="company-name">Amazon</div>
+          </div>
+          <div class="vacancy-details">
+              <div class="job-title-container">
+                  <span class="job-title">Quality analyst</span>
+                  <span class="job-type">Fresher</span>
+              </div>
+              <div class="job-tags">
+                  <span class="tag">agile</span>
+              </div>
+              <div class="job-meta">
+                  <span class="job-period"><i class="uil-bookmark-full"></i> Full-Time</span>
+                  <span class="job-qualification"><i class="uil-university"></i> Bachelor's Degree</span>
+                  <span class="job-notice"><i class="uil-clock"></i> 2 weeks notice</span>
+                  <span class="job-location"><i class="uil-map-marker-alt"></i> New York, NY</span>
+                  <span class="job-salary"><i class="uil-money-withdrawal"></i> 5-8 LPA</span>
+                  <span class="job-date"><i class="uil-calendar-alt"></i> 10/07/2024</span>
+              </div>
+          </div>
+          <div class="apply">
+            <button class="apply-button" data-link="https://www.capgemini.com/careers/join-capgemini/job-search/?size=45" data-email="">Apply Now</button>
+          </div>
+      </div>
+
+  </div>
+
+  <div id="no-match-message" class="no-match" style="display: none;">No match found.</div>
+</section>
+
+
+        <!-- Additional Ads Banner -->
+        <section>
+            <div class="ad-banner">
+                <div class="ad-content">
+                    <div class="ad-flex">
+                        <div class="ad-image1">
+                            <img src="goodluck.png" alt="Ad Image">
+                        </div>
+                        <div class="ad-text">
+                            <h1>Good Luck for your Dream Job!</h1>
+                            <p>We wish you success on your journey to find the perfect opportunity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#eula"><i class="uil-file-shield-alt"></i>End User License Agreement</a>
+                <a href="#privacy"><i class="uil uil-lock"></i>Privacy Policy</a>
+                <a href="#terms"><i class="uil uil-file-check"></i>Terms & Conditions</a>
+                <a href="#coffee"><i class="uil uil-coffee"></i>Buy a Coffee</a>
+            </div>
+            <div class="footer-rights">
+                <p>Coded & Designed by <b>CRE</b>. All rights reserved to <b>RE-START</b>.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

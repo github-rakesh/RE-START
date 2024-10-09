@@ -1,0 +1,598 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*----------------------------------------------------------------------*/
+header {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.logo i {
+  font-size: 35px;
+  margin-right: 10px;
+  color: #FF7754;
+  margin-left: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-re {
+  color: #FF7754;
+}
+
+.logo p {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 5px;
+  color: #9086e6;
+  letter-spacing: 3px; /* Adjust the spacing between letters */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-transform: lowercase; /* Optional: Capitalize letters for better alignment */
+}
+
+/*------------------------------------------------------------------------------*/
+
+main {
+  padding: 20px;
+}
+
+/* Job Search Section */
+.job-search {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.job-search h1 {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.job-search input[type="text"] {
+  width: 50%; /* Set width of the input field */
+  padding: 12px; /* Add padding for inner spacing */
+  font-size: 16px; /* Set font size for the input text */
+  border: 2px solid #FF7754; /* Border color */
+  border-radius: 25px; /* Rounded corners */
+  outline: none; /* Remove outline on focus */
+  transition: all 0.1s ease; /* Smooth transition for properties */
+}
+
+.job-search input[type="text"]:focus {
+  border-color: #9086e6; /* Change border color on focus */
+}
+
+.job-search input[type="text"]::placeholder {
+  color: #999; /* Placeholder text color */
+  font-style: italic; /* Italicize placeholder text */
+}
+
+.job-search input[type="text"]:hover {
+  border-color: #EA2600; /* Change border color on hover */
+}
+/* Ads Banner Section */
+.ads-banner {
+  background-color: #9086e6;
+  color: #ffffff;
+  padding-left: 100px;
+  padding-right: 50px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  height: 200px; /* Set a fixed height for the banner */
+}
+
+.ads-banner .ad-text {
+  flex: 1;
+}
+
+.ads-banner h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.ads-banner p {
+  font-size: 16px;
+}
+
+.ads-banner .ad-image img {
+  max-width: 350px; /* Increased width for larger image */
+  height: auto;     /* Allow the height to adjust proportionally */
+  border-radius: 10px;
+}
+
+
+/*----------------------------------------------------------------------------------*/
+
+
+.popular-job-section {
+  margin: 20px 0; /* Space above and below the section */
+}
+
+/* Header Flex Container */
+.header {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: space-between; /* Space between header and button */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 20px; /* Space below the header */
+  width: 100%; /* Full width for the header */
+}
+
+.job-container {
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Align items vertically */
+  overflow: hidden; /* Hide overflow for the entire container */
+}
+
+.job-grid {
+  display: flex; /* Flexbox for horizontal layout */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Space between job cards */
+  padding-bottom: 10px; /* Space for scroll */
+  white-space: nowrap; /* Prevent line breaks */
+  max-width: 100%; /* Ensure it doesn't overflow the container */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.job-grid::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.job-card {
+  min-width: 220px; /* Minimum width for each job card */
+  background-color: #fff; /* White background */
+  border: 2px solid #9086e6; /* Border color */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack contents vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.job-info {
+  display: flex; /* Enable flexbox for job info */
+  flex-direction: column; /* Stack contents vertically */
+  width: 100%; /* Full width for job info */
+}
+
+.job-info-fixed {
+  position: relative; /* For absolute positioning of favorite icon */
+  width: 180px; /* Fixed width for job info section */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.company-logo {
+  width: 600px; /* Fixed width for the company logo */
+  height: 600px; /* Fixed height for the company logo */
+  border-radius: 15px; /* Rounded corners */
+  margin-bottom: 10px; /* Space below the logo */
+}
+
+.job-info h3 {
+  font-size: 14px; /* Font size for company name */
+  margin-bottom: 15px; /* Space below company name */
+  color: #000; /* Black color for text */
+}
+.job-info p {
+  font-size: 14px;
+}
+
+.job-title {
+  margin-bottom: 10px; /* Space below job title */
+}
+
+.location-salary {
+  display: flex; /* Enable flexbox for location and salary */
+  justify-content: space-between; /* Space between location and salary */
+  width: 100%; /* Full width for this container */
+  gap: 50px; /* Space between location and salary */
+}
+
+.location,
+.salary {
+  font-size: 14px; /* Font size for location and salary */
+  color: #363436; /* Dark gray color */
+}
+
+
+
+
+/*-----------------------------------------------------------------*/
+
+
+
+.vacancy-list-section {
+  margin: 20px 0; /* Space above and below the section */
+}
+
+.vacancy-header {
+  display: flex; /* Flex container for header */
+  justify-content: space-between; /* Space between title and button */
+  align-items: center; /* Center items vertically */
+}
+
+.vacancy-title {
+  text-align: left; /* Align text to the left */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.vacancy-container {
+  display: flex; /* Flex container for vacancy items */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.vacancy-item {
+  background-color: #fff;
+  border: 2px solid #9086e6; /* Border color */
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space between sections */
+  align-items: center; /* Center items vertically */
+  margin: 8px 0; /* Space between items */
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column; /* Keep company info in a column */
+  align-items: center; /* Center align the logo and name */
+  margin-left: 20px; /* Adjust space between logo and details */
+
+}
+
+.company-logo {
+  width: 100px; /* Logo size */
+  height: 60px; /* Logo size */
+}
+
+.vacancy-details {
+  flex: 2; /* Allow vacancy details to take up more space */
+  padding-left: 50px; /* Remove padding */
+  padding-bottom: 5px;
+  text-align: left; /* Ensures all text aligns to the left */
+}
+
+.job-title-container {
+  display: flex;
+  justify-content: space-between; /* Space between title and job type */
+  align-items: center; /* Center vertically */
+}
+
+.job-title {
+  font-weight: bold;
+  color: #000;
+  font-size: 20px;
+}
+
+.job-type {
+  background-color: #9086e6; /* Background for job type */
+  color: #fff;
+  padding: 5px 10px;
+  margin-right: 300px;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.job-tags {
+  margin-bottom: 10px; /* Space between tags and meta info */
+}
+
+.tag {
+  background-color: #d9d6d5;
+  color: #9086e6;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap; /* Wrap items if they overflow */
+  gap: 10px; /* Space between meta items */
+  margin-top: 5px; /* Space above meta section */
+}
+
+.job-meta i {
+  color: #FF7754; /* Icon color */
+  margin-right: -1px; /* Space between icon and text */
+}
+
+.apply {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-end; /* Align items to the right */
+  margin-right: -80px; /* Adjust right padding */
+  padding-left: 50px;
+  padding-bottom: 30px;
+}
+
+.apply-button {
+  background-color: #FF7754; /* Button color */
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.apply-button:hover {
+  background-color: #9086e6; /* Darker on hover */
+}
+
+
+
+/*----------------------------------------------------------------*/
+
+
+.job-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Title and job type on the same line */
+  font-size: 18px;
+  margin-bottom: -2px;
+}
+
+.job-title {
+  font-weight: bold;
+  color: #000;
+  font-size: 20px;
+}
+
+.job-type {
+  background-color: #9086e6; /* Blue background for job type */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 13px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.job-tags {
+  margin-bottom: 15px; /* Adds space between tags and meta info */
+}
+
+.tag {
+  background-color: #d9d6d5;
+  color: #9086e6;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.job-meta {
+  display: flex;
+  justify-content: space-between; /* Equally space out meta details */
+  align-items: center;
+  margin-top: 15px;
+  gap: 60px;
+}
+.job-meta i {
+  color: #FF7754;
+  font-size: 16px;
+  font-weight: bold;
+}
+.job-meta span {
+  font-size: 14px;
+  color: #363436;
+}
+
+.job-salary {
+  color: #363436; /* Highlight salary in red */
+}
+
+.job-date {
+  font-size: 12px;
+  color: #363436; /* Lighter color for date */
+}
+
+.apply {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-end;
+  padding-right: 100px;
+  padding-top: 45px; /* Align items to the right */
+  margin-left: 20px; /* Space between vacancy details and apply section */
+}
+
+.apply-button {
+  background-color: #FF7754; /* Blue background */
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.apply-button:hover {
+  background-color: #9086e6; /* Darker blue on hover */
+}
+
+.post-date {
+  font-size: 12px; /* Smaller font size for post date */
+  color: #7b7777; /* Lighter color for better contrast */
+  margin-top: 10px;
+  margin-right: -85px; /* Space between button and date */
+  text-align: right; /* Align text to the right */
+}
+
+
+
+
+
+
+
+
+/* Banner Styling */
+.ad-banner {
+  background-color: #f9f9f9; /* Replace with your background image */
+  padding: 30px 20px;
+  text-align: left;
+  color: #ff7754;
+  padding-right: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #9086e6;
+  height: 200px;
+
+}
+
+.ad-content {
+  position: relative;
+  z-index: 1;
+}
+/* Ad Banner Image Styling */
+.ad-flex {
+  display: flex;
+  align-items: center; /* Vertically centers the image and text */
+  justify-content: space-between; /* Adds space between image and text */
+  gap: 20px; /* Optional: Adjust space between the image and text */
+}
+
+/* Image Styling */
+.ad-image1 img {
+  max-width: 180px; /* Adjust image size */
+  height: auto;
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+.ad-banner .ad-image1 img {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: 280px; /* Maintains the aspect ratio */
+  margin-top: -60px;
+  margin-left: 100px;
+  display: inline-block; /* Ensures the image respects the centered alignment */
+  }
+
+
+.ad-banner h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+.ad-banner h1 {
+  margin-top: -50px;
+}
+
+.ad-banner p {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+  color: #363436;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Styling */
+.footer {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 0;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: auto;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+/* Links Section */
+.footer-links {
+  text-align: center;
+}
+.footer-links i {
+  color: #ff7754;
+}
+
+.footer-links a {
+  color: #000;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-links a i {
+  margin-right: 5px;
+}
+
+.footer-links a:hover {
+  color: #f39c12; /* Highlight color on hover */
+}
+
+/* Copyright Section */
+.footer-rights {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.footer-rights p {
+  margin: 0;
+}
+
+.footer-rights b {
+  font-weight: bold;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
