@@ -466,10 +466,10 @@ main {
 
 /* Banner Styling */
 .ad-banner {
-  background-color: #f9f9f9; /* Replace with your background image */
+  background-color: #ff7754; /* Replace with your background image */
   padding: 30px 20px;
   text-align: left;
-  color: #ff7754;
+  color: #fff;
   padding-right: 200px;
   border-radius: 10px;
   box-shadow: 0 4px 10px #9086e6;
